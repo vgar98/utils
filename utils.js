@@ -1,0 +1,5 @@
+const validador_para_validar = ( valor ) => ( valor != "") ? true : ( valor != [] ) ? true : ( valor != false ) ? true : ( valor != null ) ? true : false;
+
+const obtener_fecha = ( fecha = new Date() ) => `${ (new Date(fecha)).getFullYear() }-${ (((new Date(fecha)).getMonth() * 1 + 1) < 10) ? '0' + ((new Date(fecha)).getMonth() * 1 + 1) : (new Date(fecha)).getMonth() * 1 + 1 }-${ ((new Date(fecha)).getDate() < 10) ? '0' + (new Date(fecha).getDate()) : (new Date(fecha).getDate()) }`;
+
+const obtener_fecha_ymdhis = ( fecha = new Date() ) => `${ (new Date(fecha)).getFullYear() }-${ (((new Date(fecha)).getMonth() * 1 + 1) < 10) ? '0' + ((new Date(fecha)).getMonth() * 1 + 1) : ((new Date(fecha)).getMonth() * 1 + 1) }-${ (((new Date(fecha)).getDay()) < 10) ? '0' + ((new Date(fecha)).getDay()) : ((new Date(fecha)).getDay()) } ${ (((new Date(fecha)).getHours()) < 10) ? '0' + ((new Date(fecha)).getHours()) : ((new Date(fecha)).getHours()) }:${ (((new Date(fecha)).getMinutes()) < 10) ? '0' + ((new Date(fecha)).getMinutes()) : ((new Date(fecha)).getMinutes()) }`;
